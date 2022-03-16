@@ -1,38 +1,66 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app-container {
+  display: grid;
+  grid-template-columns: minmax(280px, 20%) 1fr;
+  gap: 10px;
+}
+.selector {
+  justify-self: start;
+  margin: 5px;
+  height: 25px;
+  width: 250px;
+  font-size: medium;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.dayCard {
+  height: auto;
+  border: solid 1px;
+  border-color: #79b4b7;
+  border-radius: 8px;
+  width: auto;
+  padding: 5px;
+  text-align: start;
+}
+.date {
+  display: grid;
+  grid-template-columns: 80% 20%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.activities {
+  display: grid;
+  grid-template-columns: 75% 25%;
+  gap: 5px;
+  border: red solid 1px;
+  justify-content: space-around;
 }
 
-.App-link {
-  color: #61dafb;
+.weekend {
+  background-color: rgb(153, 122, 81);
+}
+.dayContainer {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+}
+.weekContainer {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  gap: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.sidebar {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 5px;
+  width: 100%;
+  background-color: rgb(255, 194, 194);
+  padding: 5px;
+}
+.textArea {
+  height: 20px;
+  width: 100%;
+  justify-self: center;
 }
